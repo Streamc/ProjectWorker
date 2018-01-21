@@ -1,0 +1,31 @@
+@page
+@model Proj_s.Pages.ProjectWorkers.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ProjectAssignment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProjectAssignment.Project)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProjectAssignment.Project.ID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProjectAssignment.Worker)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProjectAssignment.Worker.ID)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-page="./Index">Back to List</a>
+</div>

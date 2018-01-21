@@ -1,0 +1,70 @@
+@page
+@model Proj_s.Pages.Projects.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Project</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Project.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Project.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Project.Customer_Company)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Project.Customer_Company)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Project.Executive_Company)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Project.Executive_Company)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Project.ManagerID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Project.ManagerID)
+        </dd>
+         <dt>
+            @Html.DisplayNameFor(model => model.Project.Begin_date)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Project.Begin_date)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Project.End_date)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Project.End_date)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Project.Priority)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Project.Priority)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Project.Test_comment)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Project.Test_comment)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Project.ID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

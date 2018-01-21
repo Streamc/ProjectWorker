@@ -1,0 +1,49 @@
+@page
+@model Proj_s.Pages.Workers.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Worker</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Worker.Firstname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Worker.Firstname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Worker.Lastname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Worker.Lastname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Worker.Fathername)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Worker.Fathername)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Worker.email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Worker.email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Worker.Company_name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Worker.Company_name)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Worker.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

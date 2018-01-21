@@ -1,0 +1,52 @@
+@page
+@model Proj_s.Pages.Workers.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Worker</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Worker.Firstname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Worker.Firstname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Worker.Lastname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Worker.Lastname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Worker.Fathername)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Worker.Fathername)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Worker.email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Worker.email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Worker.Company_name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Worker.Company_name)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Worker.ID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

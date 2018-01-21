@@ -1,0 +1,67 @@
+@page
+@model Proj_s.Pages.Projects.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Project</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Project.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Project.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Project.Customer_Company)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Project.Customer_Company)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Project.Executive_Company)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Project.Executive_Company)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Project.ManagerID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Project.ManagerID)
+        </dd>
+         <dt>
+            @Html.DisplayNameFor(model => model.Project.Begin_date)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Project.Begin_date)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Project.End_date)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Project.End_date)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Project.Priority)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Project.Priority)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Project.Test_comment)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Project.Test_comment)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Project.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
