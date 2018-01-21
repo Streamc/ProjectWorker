@@ -28,9 +28,8 @@ namespace Proj_s.Data
                 nlogger.Error(e, "Stopped program because of exception");
                 throw;
             }*/
-            //tset
-           
 
+        
             var host = BuildWebHost(args);
 
             using (var scope = host.Services.CreateScope())
